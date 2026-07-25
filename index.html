@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity Analyst | Portfolio</title>
+  <title>German 'parzival' Bigrevich | Portfolio</title>
   
-  <!-- 
-    SECURITY: Content Security Policy (CSP)
-    Previene XSS y la inyección de código malicioso limitando los orígenes permitidos.
-  -->
+  <!-- SECURITY: Content Security Policy (CSP) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none';">
-  
-  <!-- SECURITY: Previene que se envíe información de referencia a sitios externos -->
+  <!-- SECURITY: Referrer Policy -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Fuentes -->
@@ -27,10 +23,10 @@
   <header>
     <div class="container">
       <nav>
-        <a href="#" class="logo"><i data-lucide="shield-check" width="24" height="24"></i> Cyber<span>.</span>Sec</a>
+        <a href="#" class="logo"><i data-lucide="shield-check" width="24" height="24"></i> Info<span>.</span>Sec</a>
         <div class="nav-links">
           <a href="#about">01. Perfil</a>
-          <a href="#projects">02. Laboratorios</a>
+          <a href="#projects">02. Experiencia & Liderazgo</a>
           <a href="#contact">03. Contacto</a>
         </div>
       </nav>
@@ -40,11 +36,11 @@
   <main>
     <section id="hero" class="container">
       <div>
-        <span class="hero-greeting"><i data-lucide="terminal" width="20" height="20"></i> root@localhost:~#</span>
-        <h1 class="hero-title">Hola, soy Mateo. <span>Audito, protejo y vulnero sistemas.</span></h1>
-        <p class="hero-desc">Estudiante avanzado de Ciberseguridad apasionado por el Red Teaming, el análisis de vulnerabilidades y la automatización. Construyendo redes seguras a través de la mentalidad de un atacante.</p>
+        <span class="hero-greeting"><i data-lucide="lock" width="20" height="20"></i> Secure Connection Established</span>
+        <h1 class="hero-title">Hola, soy German <span>Protejo redes, analizo riesgos y construyo comunidad.</span></h1>
+        <p class="hero-desc">Técnico en Seguridad Informática con un fuerte enfoque en arquitecturas de red, gestión de normativas internacionales y liderazgo tecnológico. Transformando la seguridad en un habilitador para las organizaciones.</p>
         <a href="#projects" class="btn btn-primary">
-          <i data-lucide="scan-line" width="20" height="20"></i> Iniciar Escaneo
+          <i data-lucide="network" width="20" height="20"></i> Ver Iniciativas
         </a>
       </div>
     </section>
@@ -53,18 +49,18 @@
       <div class="container about-grid">
         <div>
           <h2 class="section-title">01. Mi Perfil</h2>
-          <span class="section-subtitle">Operaciones & Análisis</span>
+          <span class="section-subtitle">Gestión, Redes & Nube</span>
         </div>
         <div class="about-text">
-          <p>Actualmente cursando los últimos semestres de la licenciatura/tecnicatura, dedico mi tiempo libre a resolver máquinas en <strong>HackTheBox</strong> y <strong>TryHackMe</strong> (Top 5% en la plataforma).</p>
-          <p>Mi objetivo es entender a profundidad cómo funcionan las arquitecturas de red e infraestructuras cloud, para luego encontrar sus fallos lógicos. Actualmente me encuentro en preparación para la certificación <strong>eJPT / CompTIA Security+</strong>.</p>
+          <p>Tengo una visión integral de la seguridad. Mi base es técnica: actualmente me encuentro cursando las certificaciones <strong>Cisco CCST y CCNA</strong> para dominar el enrutamiento, conmutación y segmentación segura de redes.</p>
+          <p>Pero la técnica no sirve sin estándares. Me especializo en la comprensión y análisis de la norma <strong>ISO/IEC 27001</strong>, entendiendo cómo implementar un Sistema de Gestión de Seguridad de la Información (SGSI). Además, creo firmemente en el poder de compartir conocimiento como co-fundador de comunidades.</p>
           
           <div class="tech-stack">
-            <span class="tech-tag">Python / Bash</span>
-            <span class="tech-tag">Burp Suite</span>
-            <span class="tech-tag">Active Directory</span>
-            <span class="tech-tag">Linux Internals</span>
-            <span class="tech-tag">Wireshark</span>
+            <span class="tech-tag"><i data-lucide="file-check-2" width="16"></i> ISO/IEC 27001</span>
+            <span class="tech-tag"><i data-lucide="network" width="16"></i> Cisco CCNA / CCST</span>
+            <span class="tech-tag"><i data-lucide="cloud" width="16"></i> AWS Cloud</span>
+            <span class="tech-tag"><i data-lucide="users" width="16"></i> Liderazgo TI</span>
+            <span class="tech-tag"><i data-lucide="shield-alert" width="16"></i> Risk Management</span>
           </div>
         </div>
       </div>
@@ -72,46 +68,49 @@
 
     <section id="projects">
       <div class="container">
-        <h2 class="section-title">02. Laboratorios & Scripts</h2>
-        <span class="section-subtitle">Investigación Práctica</span>
+        <h2 class="section-title">02. Liderazgo & Proyectos</h2>
+        <span class="section-subtitle">Comunidad e Infraestructura</span>
 
         <div class="projects-grid">
+          <!-- Cybermind -->
           <article class="project-card">
             <div class="project-icon">
-              <i data-lucide="bug" width="40" height="40"></i>
+              <i data-lucide="brain-circuit" width="40" height="40"></i>
             </div>
-            <h3 class="project-title">Escáner de Vulnerabilidades Aut.</h3>
-            <p class="project-desc">Script desarrollado en Python (utilizando Scapy y Sockets) capaz de realizar descubrimiento de hosts, escaneo de puertos sigiloso y emparejamiento básico con la base de datos de CVEs (NVD API).</p>
+            <h3 class="project-title">Cybermind (Co-fundador)</h3>
+            <p class="project-desc">Iniciativa dedicada a la educación y concientización en Ciberseguridad en Argentina. Desarrollamos contenido, recursos y un entorno donde la seguridad de la información se vuelve accesible para todos.</p>
             <div class="project-links">
-              <!-- SECURITY: rel="noopener noreferrer" previene ataques de Reverse Tabnabbing -->
-              <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Ver código en GitHub">
-                <i data-lucide="github" width="20" height="20"></i> Código Base
+              <a href="https://sites.google.com/view/cybermind-arg/p%C3%A1gina-principal" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visitar Cybermind">
+                <i data-lucide="external-link" width="20" height="20"></i> Visitar Portal
               </a>
             </div>
           </article>
 
+          <!-- AWS SBG UCASAL -->
           <article class="project-card">
             <div class="project-icon">
-              <i data-lucide="server" width="40" height="40"></i>
+              <i data-lucide="cloud-lightning" width="40" height="40"></i>
             </div>
-            <h3 class="project-title">Enterprise AD Homelab</h3>
-            <p class="project-desc">Despliegue localizado de una red corporativa utilizando Hyper-V. Configuración de un Domain Controller vulnerable por diseño para practicar ataques reales: Kerberoasting, AS-REP Roasting y Pass-The-Hash.</p>
+            <h3 class="project-title">AWS Student Builder Group</h3>
+            <p class="project-desc">Líder activo del AWS SBG UCASAL. Fomento el aprendizaje, junto a mi equipo de trabajo, de arquitecturas seguras en la nube, organizo encuentros y guío a otros estudiantes en su adopción del ecosistema Amazon Web Services.</p>
             <div class="project-links">
-              <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Leer documentación">
-                <i data-lucide="file-text" width="20" height="20"></i> Ver Topología
+              <a href="https://www.instagram.com/awssbg.ucasal/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Ver perfil de Instagram AWS SBG">
+                <i data-lucide="instagram" width="20" height="20"></i> Ver Comunidad
               </a>
             </div>
           </article>
 
+          <!-- Laboratorio CCNA -->
           <article class="project-card">
             <div class="project-icon">
-              <i data-lucide="flag" width="40" height="40"></i>
+              <i data-lucide="router" width="40" height="40"></i>
             </div>
-            <h3 class="project-title">CTF Writeups & Malware Analysis</h3>
-            <p class="project-desc">Repositorio detallado documentando la resolución paso a paso de máquinas de penetración avanzadas y análisis estático inicial de muestras de malware en un entorno seguro (Sandbox).</p>
+            <h3 class="project-title">Network Security Labs</h3>
+            <p class="project-desc">Diseño y simulación de topologías empresariales seguras utilizando Packet Tracer y equipos físicos. Aplicación práctica de ACLs, Port Security, VLANs y protocolos de enrutamiento bajo el currículo CCNA.</p>
             <div class="project-links">
-              <a href="https://tu-blog.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Leer blog">
-                <i data-lucide="external-link" width="20" height="20"></i> Leer Writeups
+              <!-- Reemplaza el # por tu repositorio de github donde tengas apuntes de CCNA si lo deseas -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Ver documentación">
+                <i data-lucide="file-text" width="20" height="20"></i> Topologías (GitHub)
               </a>
             </div>
           </article>
@@ -122,8 +121,8 @@
     <section id="contact">
       <div class="container contact-wrapper">
         <h2 class="section-title">03. Establecer Conexión</h2>
-        <span class="section-subtitle">Búsqueda Activa</span>
-        <p class="hero-desc" style="margin: 0 auto 2rem;">Estoy en búsqueda de mi primera oportunidad profesional como <strong>Analista SOC Junior</strong> o <strong>Pentester Trainee</strong>. Si tu equipo busca un perfil técnico, curioso y obsesionado con el aprendizaje continuo, hablemos.</p>
+        <span class="section-subtitle">Oportunidades & Networking</span>
+        <p class="hero-desc" style="margin: 0 auto 2rem;">Estoy abierto a nuevas oportunidades en los equipos de <strong>Seguridad Defensiva (Blue Team)</strong>, <strong>Administración de Redes Seguras</strong> o <strong>Auditoría/GRC (ISO 27001)</strong>. Si buscas un perfil proactivo que lidera con el ejemplo, hablemos.</p>
         
         <!-- SECURITY: Botón protegido, el href se inyecta por JS para evadir bots -->
         <a href="#" id="secure-contact" class="btn btn-primary">
@@ -131,14 +130,14 @@
         </a>
 
         <div class="social-links">
-          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de GitHub">
-            <i data-lucide="github" width="24" height="24"></i>
-          </a>
           <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de LinkedIn">
             <i data-lucide="linkedin" width="24" height="24"></i>
           </a>
-          <a href="https://tryhackme.com/p/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TryHackMe / HackTheBox">
-            <i data-lucide="box" width="24" height="24"></i>
+          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de GitHub">
+            <i data-lucide="github" width="24" height="24"></i>
+          </a>
+          <a href="https://sites.google.com/view/cybermind-arg/p%C3%A1gina-principal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cybermind">
+            <i data-lucide="globe" width="24" height="24"></i>
           </a>
         </div>
       </div>
@@ -151,9 +150,9 @@
     </div>
   </footer>
 
-  <!-- Script Externo (CDN seguro) -->
+  <!-- Script Externo -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Script Propio deferido (No bloquea el renderizado) -->
+  <!-- Script Propio -->
   <script src="./index.js" defer></script>
 </body>
 </html>
