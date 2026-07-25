@@ -40,6 +40,7 @@ Te invito a conocer los proyectos que impulso junto a otros profesionales y estu
 
 Si buscas sumar a tu equipo a un perfil Defensivo (Blue Team), Analista SOC, Administrador de Redes Seguras o Auditor Junior (ISO/IEC 27001):
 
+*   **Email:** [parz1val93@proton.me](mailto:parz1val93@proton.me)
 *   **LinkedIn:** [Tu Nombre en LinkedIn]([https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/gmbigrevich/))
 *   **GitHub:** [Tu Usuario Github](https://github.com/gmbigrevich)
 
