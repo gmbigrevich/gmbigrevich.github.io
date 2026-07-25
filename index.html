@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Analyst | Portfolio</title>
+  
+  <!-- 
+    SECURITY: Content Security Policy (CSP)
+    Previene XSS y la inyección de código malicioso limitando los orígenes permitidos.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none';">
+  
+  <!-- SECURITY: Previene que se envíe información de referencia a sitios externos -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"><i data-lucide="shield-check" width="24" height="24"></i> Cyber<span>.</span>Sec</a>
+        <div class="nav-links">
+          <a href="#about">01. Perfil</a>
+          <a href="#projects">02. Laboratorios</a>
+          <a href="#contact">03. Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="container">
+      <div>
+        <span class="hero-greeting"><i data-lucide="terminal" width="20" height="20"></i> root@localhost:~#</span>
+        <h1 class="hero-title">Hola, soy Mateo. <span>Audito, protejo y vulnero sistemas.</span></h1>
+        <p class="hero-desc">Estudiante avanzado de Ciberseguridad apasionado por el Red Teaming, el análisis de vulnerabilidades y la automatización. Construyendo redes seguras a través de la mentalidad de un atacante.</p>
+        <a href="#projects" class="btn btn-primary">
+          <i data-lucide="scan-line" width="20" height="20"></i> Iniciar Escaneo
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <h2 class="section-title">01. Mi Perfil</h2>
+          <span class="section-subtitle">Operaciones & Análisis</span>
+        </div>
+        <div class="about-text">
+          <p>Actualmente cursando los últimos semestres de la licenciatura/tecnicatura, dedico mi tiempo libre a resolver máquinas en <strong>HackTheBox</strong> y <strong>TryHackMe</strong> (Top 5% en la plataforma).</p>
+          <p>Mi objetivo es entender a profundidad cómo funcionan las arquitecturas de red e infraestructuras cloud, para luego encontrar sus fallos lógicos. Actualmente me encuentro en preparación para la certificación <strong>eJPT / CompTIA Security+</strong>.</p>
+          
+          <div class="tech-stack">
+            <span class="tech-tag">Python / Bash</span>
+            <span class="tech-tag">Burp Suite</span>
+            <span class="tech-tag">Active Directory</span>
+            <span class="tech-tag">Linux Internals</span>
+            <span class="tech-tag">Wireshark</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">02. Laboratorios & Scripts</h2>
+        <span class="section-subtitle">Investigación Práctica</span>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="bug" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">Escáner de Vulnerabilidades Aut.</h3>
+            <p class="project-desc">Script desarrollado en Python (utilizando Scapy y Sockets) capaz de realizar descubrimiento de hosts, escaneo de puertos sigiloso y emparejamiento básico con la base de datos de CVEs (NVD API).</p>
+            <div class="project-links">
+              <!-- SECURITY: rel="noopener noreferrer" previene ataques de Reverse Tabnabbing -->
+              <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Ver código en GitHub">
+                <i data-lucide="github" width="20" height="20"></i> Código Base
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="server" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">Enterprise AD Homelab</h3>
+            <p class="project-desc">Despliegue localizado de una red corporativa utilizando Hyper-V. Configuración de un Domain Controller vulnerable por diseño para practicar ataques reales: Kerberoasting, AS-REP Roasting y Pass-The-Hash.</p>
+            <div class="project-links">
+              <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Leer documentación">
+                <i data-lucide="file-text" width="20" height="20"></i> Ver Topología
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="flag" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">CTF Writeups & Malware Analysis</h3>
+            <p class="project-desc">Repositorio detallado documentando la resolución paso a paso de máquinas de penetración avanzadas y análisis estático inicial de muestras de malware en un entorno seguro (Sandbox).</p>
+            <div class="project-links">
+              <a href="https://tu-blog.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Leer blog">
+                <i data-lucide="external-link" width="20" height="20"></i> Leer Writeups
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-wrapper">
+        <h2 class="section-title">03. Establecer Conexión</h2>
+        <span class="section-subtitle">Búsqueda Activa</span>
+        <p class="hero-desc" style="margin: 0 auto 2rem;">Estoy en búsqueda de mi primera oportunidad profesional como <strong>Analista SOC Junior</strong> o <strong>Pentester Trainee</strong>. Si tu equipo busca un perfil técnico, curioso y obsesionado con el aprendizaje continuo, hablemos.</p>
+        
+        <!-- SECURITY: Botón protegido, el href se inyecta por JS para evadir bots -->
+        <a href="#" id="secure-contact" class="btn btn-primary">
+          <i data-lucide="mail" width="20" height="20"></i> Enviar PING
+        </a>
+
+        <div class="social-links">
+          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de GitHub">
+            <i data-lucide="github" width="24" height="24"></i>
+          </a>
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil de LinkedIn">
+            <i data-lucide="linkedin" width="24" height="24"></i>
+          </a>
+          <a href="https://tryhackme.com/p/tu-usuario" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TryHackMe / HackTheBox">
+            <i data-lucide="box" width="24" height="24"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" style="vertical-align: middle;"></i> & curiosity &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- Script Externo (CDN seguro) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Script Propio deferido (No bloquea el renderizado) -->
+  <script src="./index.js" defer></script>
+</body>
+</html>
