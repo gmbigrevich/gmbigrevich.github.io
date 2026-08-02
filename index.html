@@ -6,7 +6,7 @@
   <title>German 'parzival' Bigrevich | Portfolio</title>
   
   <!-- SECURITY: Content Security Policy (CSP) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; script-src 'self' https://unpkg.com https://cdn.credly.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.credly.com; connect-src 'self'; object-src 'none'; upgrade-insecure-requests;">
   <!-- SECURITY: Referrer Policy -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -27,7 +27,8 @@
         <div class="nav-links">
           <a href="#about">01. Perfil</a>
           <a href="#projects">02. Experiencia & Liderazgo</a>
-          <a href="#contact">03. Contacto</a>
+          <a href="#certifications">03. Certificaciones</a>
+          <a href="#contact">04. Contacto</a>
         </div>
       </nav>
     </div>
@@ -118,11 +119,32 @@
       </div>
     </section>
 
+    <section id="certifications">
+      <div class="container">
+        <h2 class="section-title">03. Certificaciones</h2>
+        <span class="section-subtitle">Validación Profesional</span>
+
+        <div class="projects-grid">
+          <!-- CCST Cybersecurity -->
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="badge-check" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">CCST Cybersecurity</h3>
+            <p class="project-desc">Certified Julio 2026. Certificación oficial de Cisco que valida los fundamentos de ciberseguridad: principios de seguridad, redes, sistemas operativos y políticas de defensa.</p>
+            <div class="project-links cert-badge-wrapper">
+              <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d03bb7bb-a938-43fe-a21a-982b9f1fd22c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="container contact-wrapper">
-        <h2 class="section-title">03. Establecer Conexión</h2>
+        <h2 class="section-title">04. Establecer Conexión</h2>
         <span class="section-subtitle">Oportunidades & Networking</span>
-        <p class="hero-desc" style="margin: 0 auto 2rem;">Estoy abierto a nuevas oportunidades en los equipos de <strong>Seguridad Defensiva (Blue Team)</strong>, <strong>Administración de Redes Seguras</strong> o <strong>Auditoría/GRC (ISO 27001)</strong>. Si buscas un perfil proactivo que lidera con el ejemplo, hablemos.</p>
+        <p class="hero-desc contact-desc">Estoy abierto a nuevas oportunidades en los equipos de <strong>Seguridad Defensiva (Blue Team)</strong>, <strong>Administración de Redes Seguras</strong> o <strong>Auditoría/GRC (ISO 27001)</strong>. Si buscas un perfil proactivo que lidera con el ejemplo, hablemos.</p>
         
         <!-- SECURITY: Botón protegido, el href se inyecta por JS para evadir bots -->
         <a href="#" id="secure-contact" class="btn btn-primary">
@@ -153,12 +175,12 @@
 
   <footer>
     <div class="container">
-      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" style="vertical-align: middle;"></i> & curiosity &copy; 2026</p>
+      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" class="icon-inline"></i> & curiosity &copy; 2026</p>
     </div>
   </footer>
 
   <!-- Script Externo -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@1.28.0"></script>
   <!-- Script Propio -->
   <script src="./index.js" defer></script>
 </body>
