@@ -31,7 +31,7 @@ Mi perfil combina los fundamentos técnicos del enrutamiento de redes (**CCST / 
 
 Te invito a conocer los proyectos que impulso junto a otros profesionales y estudiantes:
 
-*   🌐 **[Cybermind Argentina](https://sites.google.com/view/cybermind-arg/p%C3%A1gina-principal):** Construyendo cultura y educación en Ciberseguridad.
+*   🌐 **[Cybermind Argentina](https://cybermind-web.vercel.app/):** Construyendo cultura y educación en Ciberseguridad.
 *   ☁️ **[AWS SBG UCASAL](https://www.instagram.com/awssbg.ucasal/):** AWS Student Builder Group de la Universidad Católica de Salta.
 
 ---
