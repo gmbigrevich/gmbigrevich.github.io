@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Reemplaza esto con tus datos reales. Al estar separados, los bots simples no los unen.
             const user = 'contacto';
-            const domain = 'mateosecurity.com';
+            const domain = 'parz1val93@proton.me';
             
             // Construcción y ejecución segura
             window.location.href = `mailto:${user}@${domain}`;
