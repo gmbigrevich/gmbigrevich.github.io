@@ -3,11 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>German 'parzival' Bigrevich | Portfolio</title>
-  
-  <!-- SECURITY: Content Security Policy (CSP) con soporte para Credly Images -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.credly.com; connect-src 'self'; object-src 'none';">
-  <!-- SECURITY: Referrer Policy -->
+  <title>German "parzival" Bigrevich | Portfolio</title>
+  <meta name="description" content="Portfolio de German Bigrevich, estudiante avanzado en Seguridad Informática (UCASAL) y Analista de ciberseguridad: seguridad defensiva, redes e infraestructura y capacitación en ciberseguridad.">
+
+  <!-- SECURITY: Content Security Policy (CSP) restrictiva, aplicada por <meta>.
+       - default-src 'none': cada tipo de recurso debe habilitarse a mano.
+       - Sin 'unsafe-inline': los estilos viven en index.css.
+       - require-trusted-types-for 'script': bloquea innerHTML aun si corriendo
+         JS inyectado. Lucide construye el SVG por DOM, no por strings, asi que no le afecta.
+       - script fijado por version + SRI (integrity) en la etiqueta <script> de lucide.
+       - img-src solo 'self': las imagenes son locales (ccstc.png / coursera.png). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; media-src 'none'; require-trusted-types-for 'script';">
+
+  <!-- PENDIENTE (requiere hosting con headers custom; GitHub Pages NO los permite).
+       Cuando migres a Cloudflare Pages / Netlify, crea un archivo _headers en la raiz:
+         /index.html
+           Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+           Content-Security-Policy: frame-ancestors 'none'
+           X-Content-Type-Options: nosniff
+           Referrer-Policy: strict-origin-when-cross-origin
+           Permissions-Policy: camera=(), microphone=(), geolocation=()
+       frame-ancestors 'none' (anti-clickjacking) NO funciona via <meta>: el navegador
+       lo ignora. Ese es el unico punto que queda abierto mientras uses GitHub Pages. -->
+
+  <!-- SECURITY: Referrer Policy (refuerzo; como header HTTP es mas fuerte) -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Fuentes -->
@@ -84,7 +103,7 @@
             <h3 class="project-title">Cybermind (Co-fundador)</h3>
             <p class="project-desc">Iniciativa dedicada a la educación y concientización en Ciberseguridad en Argentina. Desarrollamos contenido, recursos y un entorno donde la seguridad de la información se vuelve accesible para todos.</p>
             <div class="project-links">
-              <a href="https://sites.google.com/view/cybermind-arg/p%C3%A1gina-principal" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visitar Cybermind">
+              <a href="https://cybermind-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visitar Portal de Cybermind">
                 <i data-lucide="external-link" width="20" height="20"></i> Visitar Portal
               </a>
             </div>
@@ -112,7 +131,6 @@
     </section>
 
 <!-- 03. CERTIFICACIONES -->
-<!-- 03. CERTIFICACIONES -->
     <section id="certifications">
       <div class="container">
         <h2 class="section-title">03. Certificaciones</h2>
@@ -121,9 +139,9 @@
         <div class="projects-grid">
           <!-- Certificación Cisco CCST Cybersecurity -->
           <article class="project-card">
-            <div class="project-image" style="margin-bottom: 1.25rem; display: flex; justify-content: center; align-items: center; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); height: 160px; overflow: hidden; padding: 0.75rem;">
-              <a href="https://www.credly.com/badges/d03bb7bb-a938-43fe-a21a-982b9f1fd22c/embedded" target="_blank" rel="noopener noreferrer" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
-                <img src="./ccstc.png" alt="Insignia Cisco CCST Cybersecurity" style="max-height: 130px; max-width: 100%; object-fit: contain; display: block;">
+            <div class="project-image project-image--contain">
+              <a href="https://www.credly.com/badges/d03bb7bb-a938-43fe-a21a-982b9f1fd22c/embedded" target="_blank" rel="noopener noreferrer" class="project-image__link">
+                <img src="./ccstc.png" alt="Insignia Cisco CCST Cybersecurity" class="project-image__img project-image__img--contain">
               </a>
             </div>
             <div class="project-icon">
@@ -140,9 +158,9 @@
 
           <!-- Certificación Google / Coursera -->
           <article class="project-card">
-            <div class="project-image" style="margin-bottom: 1.25rem; display: flex; justify-content: center; align-items: center; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08); height: 160px; overflow: hidden;">
-              <a href="https://coursera.org/verify/NVGYVPNXK1TA" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 100%;">
-                <img src="./coursera.png" alt="Certificado Google - Administración de sistemas y servicios de infraestructura de TI" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <div class="project-image project-image--cover">
+              <a href="https://coursera.org/verify/NVGYVPNXK1TA" target="_blank" rel="noopener noreferrer" class="project-image__link">
+                <img src="./coursera.png" alt="Certificado Google - Administración de sistemas y servicios de infraestructura de TI" class="project-image__img project-image__img--cover">
               </a>
             </div>
             <div class="project-icon">
@@ -165,7 +183,7 @@
       <div class="container contact-wrapper">
         <h2 class="section-title">04. Establecer Conexión</h2>
         <span class="section-subtitle">Oportunidades & Networking</span>
-        <p class="hero-desc" style="margin: 0 auto 2rem;">Estoy abierto a nuevos desafios y oportunidades laboraes como <strong>Seguridad Defensiva</strong>, <strong>Administración de Redes e Infraestructura</strong> o <strong>Capacitación en Ciberseguridad</strong>. Si buscas un perfil proactivo que lidera con el ejemplo, hablemos.</p>
+        <p class="hero-desc contact-lead">Estoy abierto a nuevos desafíos y oportunidades laborales como <strong>Seguridad Defensiva</strong>, <strong>Administración de Redes e Infraestructura</strong> o <strong>Capacitación en Ciberseguridad</strong>. Si buscas un perfil proactivo que lidera con el ejemplo, hablemos.</p>
         
         <!-- Botón de contacto -->
         <a href="mailto:parz1val93@proton.me" id="secure-contact" class="btn btn-primary">
@@ -196,12 +214,12 @@
 
   <footer>
     <div class="container">
-      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" style="vertical-align: middle;"></i> & curiosity &copy; 2026</p>
+      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" class="footer-icon"></i> &amp; curiosity &copy; 2026</p>
     </div>
   </footer>
 
-  <!-- Script Externo -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Script Externo: versión fijada + SRI para evitar ejecución de código alterado -->
+  <script src="https://unpkg.com/lucide@1.52.0/dist/umd/lucide.min.js" integrity="sha384-SSRIJfpvnhji4rCcULgpNXRJjQ9P/odU9OaWxSumsZiokvJ7zAu4PGQVWyWxTG3u" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Script Propio -->
   <script src="./index.js" defer></script>
 </body>

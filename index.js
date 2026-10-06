@@ -12,22 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error al cargar los iconos (revisar CSP o red):", error);
     }
 
-    // 2. Ofuscación de Email (Anti-Scraping / Anti-Spam bots)
-    // Los bots que escanean GitHub Pages buscando "mailto:" no encontrarán tu correo en el HTML
-    const contactBtn = document.getElementById('secure-contact');
-    
-    if (contactBtn) {
-        contactBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            // Reemplaza esto con tus datos reales. Al estar separados, los bots simples no los unen.
-            const user = 'contacto';
-            const domain = 'parz1val93@proton.me';
-            
-            // Construcción y ejecución segura
-            window.location.href = `mailto:${user}@${domain}`;
-        });
-    }
+    // 2. Botón de contacto
+    // El enlace usa un href="mailto:" nativo, sin interceptar el click, para que
+    // funcione con teclado, lector de pantalla y "copiar dirección de enlace".
+    // Nota: la "ofuscación" de correo (armar el mailto en JS) no ocultaba nada,
+    // porque la dirección real seguía escrita en el HTML. Se eliminó para que el
+    // botón y el código apunten al mismo destino.
 
     // Nota de Seguridad Opcional:
     // Si deseas deshabilitar el click derecho para evitar inspecciones básicas (no recomendado por UX, pero usado en entornos muy estrictos)
