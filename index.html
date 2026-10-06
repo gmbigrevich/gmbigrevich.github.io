@@ -15,17 +15,6 @@
        - img-src solo 'self': las imagenes son locales (ccstc.png / coursera.png). -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; media-src 'none'; require-trusted-types-for 'script';">
 
-  <!-- PENDIENTE (requiere hosting con headers custom; GitHub Pages NO los permite).
-       Cuando migres a Cloudflare Pages / Netlify, crea un archivo _headers en la raiz:
-         /index.html
-           Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-           Content-Security-Policy: frame-ancestors 'none'
-           X-Content-Type-Options: nosniff
-           Referrer-Policy: strict-origin-when-cross-origin
-           Permissions-Policy: camera=(), microphone=(), geolocation=()
-       frame-ancestors 'none' (anti-clickjacking) NO funciona via <meta>: el navegador
-       lo ignora. Ese es el unico punto que queda abierto mientras uses GitHub Pages. -->
-
   <!-- SECURITY: Referrer Policy (refuerzo; como header HTTP es mas fuerte) -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -115,7 +104,7 @@
               <i data-lucide="server" width="40" height="40"></i>
             </div>
             <h3 class="project-title">Técnico en Soporte de Infraestructura y Redes</h3>
-            <p class="project-desc">Actualmente me desempeño como &quot;Jefe a cargo&quot; de la Jefatura de Informática y Sistemas de mi organismo provincial donde me encargo de monitorear el sistema UniFi en mesh, de mantenerlo y de aplicar mejoras sustanciales a la conectividad y modernización de los sistemas de infraestructura e informática, así como de atender las cuestiones de soporte técnico de los empleados, armado de computadoras y asesoría.</p>
+            <p class="project-desc">Actualmente me desempeño como &quot;encargado&quot; del Departamento de Informática y Sistemas de mi organismo provincial donde me encargo de monitorear el sistema UniFi en mesh, de mantenerlo y de aplicar mejoras sustanciales a la conectividad y modernización de los sistemas de infraestructura e informática, así como de atender las cuestiones de soporte técnico de los empleados, armado de computadoras y asesoría.</p>
           </article>
 
           <!-- Formación de grupos defensivos -->
