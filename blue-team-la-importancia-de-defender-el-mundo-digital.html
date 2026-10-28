@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Team: la importancia de defender el mundo digital | German "parzival" Bigrevich</title>
+  <meta name="description" content="Qué significa la ciberseguridad defensiva: el rol del Blue Team, su diferencia con el Red Team, sus responsabilidades y cómo se defiende antes, durante y después de un incidente.">
+
+  <!-- SECURITY: Content Security Policy (CSP) restrictiva, aplicada por <meta>.
+       Idéntica a la de index.html: default-src 'none', sin 'unsafe-inline',
+       require-trusted-types-for 'script', lucide con versión fijada + SRI. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; media-src 'none'; require-trusted-types-for 'script';">
+
+  <!-- SECURITY: Referrer Policy (refuerzo; como header HTTP es mas fuerte) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Fuentes (mismas que la página principal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilos: la misma de la portada + estilos exclusivos de las páginas de artículos -->
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./articulos.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="./index.html" class="logo"><i data-lucide="shield-check" width="24" height="24"></i> Info<span>.</span>Sec</a>
+        <div class="nav-links">
+          <a href="./index.html#about">01. Perfil</a>
+          <a href="./index.html#projects">02. Experiencias & Proyectos</a>
+          <a href="./index.html#certifications">03. Certificaciones</a>
+          <a href="./index.html#contact">04. Contacto</a>
+          <a href="./articulos.html" aria-current="page">05. Artículos</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ENCABEZADO DEL ARTÍCULO (mismo estilo que el hero, sin 100vh) -->
+    <section id="page-hero" class="container">
+      <div>
+        <span class="hero-greeting"><i data-lucide="file-text" width="20" height="20"></i> Artículo 01</span>
+        <h1 class="hero-title">Blue Team <span>La importancia de defender el mundo digital.</span></h1>
+        <p class="hero-desc article-meta">Publicado el 28 de octubre de 2026 &middot; Lectura de ~9 minutos</p>
+      </div>
+    </section>
+
+    <!-- CUERPO DEL ARTÍCULO -->
+    <section id="articulo">
+      <div class="container">
+        <div class="article-content">
+          <p>Quisiera inaugurar éste espacio de artículos, reflexiones y guías con algo que mezcla emociones, sueños y preocupaciones. Contextualmente vivo en un lugar donde hablar de "Blue team" o "Ciberseguridad defensiva" es hablar en ruso o alienígena. Me encuentro en una "cruzada" entre mantener una infraestructura débil e impartir conocimiento que voy adquiriendo para generar conciencia. Por eso elegí, hoy, un artículo sencillo que explique "por qué" la ciberseguridad defensiva y "cómo es", una perspectiva que me fascina y por la cual estoy formándome.</p>
+
+          <p>La ciberseguridad no consiste únicamente en descubrir cómo ingresar a un sistema: también exige protegerlo, reconocer las señales de un ataque y saber actuar cuando algo falla. En ese trabajo se sitúa el <strong>Blue Team</strong>, el equipo defensor, cuya importancia está en convertir las medidas de seguridad en una capacidad cotidiana de protección, detección y respuesta.</p>
+
+          <p>La diferencia central frente al <strong>Red Team</strong> está en su misión: mientras los defensores mantienen y mejoran la seguridad, el equipo rojo reproduce acciones de un adversario, con autorización, para comprobar si las defensas funcionan. No representan al «equipo bueno» y al «equipo malo» y esto debe servir para desmitificar ambos roles de un mismo ecosistema. Ambos trabajan para mejorar la seguridad de la misma organización, aunque lo hacen desde perspectivas diferentes.</p>
+
+          <h2>Qué significa defender</h2>
+
+          <p><strong>Ciberseguridad defensiva</strong> designa las actividades orientadas a reducir riesgos, proteger información y servicios, detectar situaciones sospechosas, responder a incidentes y recuperar las operaciones afectadas. La defensa, por lo tanto, no empieza cuando aparece una alarma ni termina cuando se elimina un archivo malicioso: también comprende preparación, revisión de controles y aprendizaje continuo.</p>
+
+          <p><strong>Defensivo no significa pasivo.</strong> La búsqueda proactiva de amenazas —conocida como <em>threat hunting</em>— consiste en investigar señales de intrusión que los controles existentes podrían haber pasado por alto, sin limitarse a esperar una alerta automática. Esa actividad sigue siendo defensiva porque busca descubrir y reducir amenazas dentro del ámbito autorizado de protección, no atacar sistemas ajenos.</p>
+
+          <h2>Blue Team frente a Red Team</h2>
+
+          <p>En el contexto profesional de este artículo, <strong>ciberseguridad ofensiva</strong> se refiere al uso autorizado de técnicas de ataque para evaluar la seguridad. Incluye actividades como las pruebas de penetración y los ejercicios de Red Team, pero estos términos no son equivalentes: una prueba de penetración se concentra en encontrar y comprobar vulnerabilidades dentro de un alcance, mientras que un ejercicio de Red Team busca alcanzar objetivos acordados y evaluar cómo funcionan las defensas frente a una intrusión simulada.</p>
+
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">Comparación entre la perspectiva defensiva y la ofensiva</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Aspecto</th>
+                  <th scope="col">Perspectiva defensiva</th>
+                  <th scope="col">Perspectiva ofensiva</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Objetivo principal</td>
+                  <td>Proteger sistemas y reducir el impacto de los ataques.</td>
+                  <td>Evaluar la seguridad mediante acciones que reproducen las capacidades de un adversario.</td>
+                </tr>
+                <tr>
+                  <td>Pregunta característica</td>
+                  <td>¿Cómo podemos prevenir, detectar y contener esta amenaza?</td>
+                  <td>¿Qué camino permitiría alcanzar el objetivo del ejercicio?</td>
+                </tr>
+                <tr>
+                  <td>Actividades habituales</td>
+                  <td>Revisar alertas, investigar eventos, desarrollar detecciones y coordinar respuestas.</td>
+                  <td>Explorar posibles vías de entrada y combinar debilidades para lograr objetivos autorizados.</td>
+                </tr>
+                <tr>
+                  <td>Forma de trabajo</td>
+                  <td>Mantener una capacidad operativa de defensa; la cobertura y los horarios dependen del riesgo y los recursos.</td>
+                  <td>Realizar evaluaciones con objetivos, alcance, permisos y plazos acordados.</td>
+                </tr>
+                <tr>
+                  <td>Resultados esperados</td>
+                  <td>Mejoras en detección, respuesta, recuperación y preparación.</td>
+                  <td>Evidencias de las rutas de ataque, fallas defensivas y recomendaciones de mejora.</td>
+                </tr>
+                <tr>
+                  <td>Relación con el otro equipo</td>
+                  <td>Utilizar los hallazgos para fortalecer controles y procedimientos.</td>
+                  <td>Mostrar qué funciona y qué necesita mejorar en la defensa.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>La distinción no depende de que una herramienta sea «de ataque» o «de defensa», sino de la finalidad, el contexto y la autorización de su uso: un defensor también necesita comprender cómo actuaría un atacante. En cualquier evaluación ofensiva profesional, los permisos y límites son esenciales; simular una intrusión no autoriza a actuar sobre cualquier sistema ni a poner en riesgo los servicios.<sup>[10][7]</sup></p>
+
+          <h2>Roles y responsabilidades</h2>
+
+          <p>El Blue Team no debe imaginarse como una única persona mirando pantallas: la defensa reúne funciones de análisis, ingeniería, investigación y coordinación, cuya distribución cambia según el tamaño y las necesidades de cada organización. Los siguientes perfiles describen responsabilidades posibles, no una plantilla obligatoria ni puestos que siempre deban existir por separado.</p>
+
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">Roles del Blue Team con su responsabilidad principal y un ejemplo ilustrativo</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rol o función</th>
+                  <th scope="col">Responsabilidad principal</th>
+                  <th scope="col">Ejemplo ilustrativo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Analista de seguridad</td>
+                  <td>Revisar alertas, relacionar eventos, distinguir actividad legítima de sospechosa y documentar o escalar los hallazgos.</td>
+                  <td>Investigar si un acceso nocturno corresponde a una tarea autorizada.</td>
+                </tr>
+                <tr>
+                  <td>Ingeniería de seguridad</td>
+                  <td>Mantener las herramientas defensivas y asegurar que reciban los registros necesarios.</td>
+                  <td>Detectar que un servidor dejó de enviar información al monitoreo.</td>
+                </tr>
+                <tr>
+                  <td>Ingeniería de detección</td>
+                  <td>Crear y ajustar reglas que permitan identificar comportamientos sospechosos.</td>
+                  <td>Preparar una alerta ante una combinación inusual de accesos y descargas.</td>
+                </tr>
+                <tr>
+                  <td>Inteligencia y búsqueda de amenazas</td>
+                  <td>Comprender amenazas relevantes y buscar indicios que hayan evadido los controles.</td>
+                  <td>Revisar si una técnica conocida de intrusión aparece en los sistemas protegidos.</td>
+                </tr>
+                <tr>
+                  <td>Respuesta a incidentes</td>
+                  <td>Investigar incidentes, coordinar acciones técnicas y contribuir a limitar el daño.</td>
+                  <td>Organizar el aislamiento de una computadora comprometida.</td>
+                </tr>
+                <tr>
+                  <td>Análisis forense digital</td>
+                  <td>Examinar evidencias para reconstruir lo ocurrido y apoyar la investigación y la mitigación.</td>
+                  <td>Analizar registros y archivos para establecer qué sistemas estuvieron involucrados.</td>
+                </tr>
+                <tr>
+                  <td>Coordinación operativa</td>
+                  <td>Organizar comunicaciones, prioridades y acciones para controlar el impacto del incidente.</td>
+                  <td>Coordinar con informática y responsables del servicio cómo recuperar una aplicación.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>También es importante distinguir <strong>Blue Team, SOC y CSIRT</strong>: el primero describe la perspectiva defensiva; un SOC —centro de operaciones de seguridad— se concentra en monitorear y analizar eventos, mientras que un CSIRT es una capacidad especializada en gestionar y coordinar incidentes. Pueden integrarse o funcionar por separado; sus nombres no sustituyen la necesidad de establecer responsabilidades y autoridad.</p>
+
+          <p>El Blue Team tampoco trabaja de manera aislada: necesita colaborar con quienes administran sistemas y servicios, y con los responsables de tomar decisiones sobre sus operaciones. Esa coordinación debe respetar las leyes, las políticas internas y la privacidad; disponer de herramientas de monitoreo no equivale a tener permiso para vigilar indiscriminadamente a las personas.</p>
+
+          <h2>Antes, durante y después</h2>
+
+          <p><strong>Antes de un incidente</strong>, la defensa contribuye a conocer qué se protege y qué resulta prioritario, revisar accesos, promover actualizaciones y comprobar que los respaldos puedan utilizarse. Estas tareas pueden ejecutarse junto con otras áreas: proteger una organización no significa que todos sus controles deban ser administrados exclusivamente por el Blue Team.</p>
+
+          <p><strong>Durante una situación sospechosa</strong>, los analistas reúnen contexto y evalúan si existe una amenaza real, porque un evento inusual no demuestra por sí solo que haya un ataque. Si se confirma un incidente, la respuesta requiere acciones coordinadas para limitar el daño, investigar su alcance y conservar información útil para comprender lo sucedido.</p>
+
+          <p><strong>Después del incidente</strong>, el trabajo continúa con la recuperación de las operaciones y la incorporación de mejoras. La revisión de lo ocurrido puede revelar controles insuficientes, registros faltantes o procedimientos que deben corregirse para reducir el riesgo de repetición.</p>
+
+          <h2>Ejemplos de la vida cotidiana</h2>
+
+          <p>Los siguientes escenarios son hipotéticos: ilustran responsabilidades y diferencias, no describen incidentes reales ni resultados garantizados.</p>
+
+          <h3>Un correo de falsa urgencia</h3>
+
+          <p>Una empleada recibe un mensaje que anuncia el bloqueo de su cuenta y le pide ingresar a un enlace. Si formara parte de un ejercicio autorizado, el Red Team podría utilizar una simulación de ese engaño para evaluar una vía de acceso y la respuesta defensiva.</p>
+
+          <p>Desde la perspectiva del Blue Team, el escenario podría incluir facilitar el reporte del mensaje, revisar si otras personas lo recibieron e investigar posibles accesos indebidos, siguiendo los procedimientos de la organización. La defensa no se reduce a exigir que nadie se equivoque: también necesita canales claros para avisar y una cultura que permita reportar problemas sin temor a ser culpabilizado.</p>
+
+          <h3>Una cuenta usada fuera de horario</h3>
+
+          <p>Una organización detecta que una cuenta comenzó a descargar información durante la madrugada. Ese comportamiento podría justificar una investigación, pero también podría tener una explicación legítima; el analista debe relacionar la alerta con otros datos antes de sacar conclusiones.</p>
+
+          <p>En un ejercicio, el Red Team podría intentar utilizar una cuenta para alcanzar información definida como objetivo; el Blue Team evaluaría si sus controles permiten reconocer y responder a ese uso. La diferencia está entre poner a prueba una ruta de ataque y detectar y controlar el riesgo que esa ruta representa.</p>
+
+          <h3>Archivos que dejan de abrirse</h3>
+
+          <p>Una oficina descubre que varios archivos ya no son accesibles y aparece un mensaje de extorsión. Ante un posible ransomware, las prioridades defensivas incluyen identificar y aislar los sistemas afectados, coordinar la investigación y preparar la recuperación de los servicios.</p>
+
+          <p>En este escenario hipotético, el Blue Team trabajaría con las áreas responsables para determinar el alcance y recuperar operaciones desde un entorno seguro; las copias de respaldo solo aportan valor si están protegidas y su recuperación fue probada. Un Red Team no necesita causar un cifrado destructivo para evaluar la defensa: los objetivos del ejercicio y sus medidas de seguridad deben permitir obtener evidencias sin provocar el daño que se busca prevenir.</p>
+
+          <h2>Por qué importa el Blue Team</h2>
+
+          <p>Su importancia comienza donde termina la confianza en una única barrera: una organización necesita reconocer y enfrentar los ataques que logren superar sus controles preventivos. Por eso, la capacidad de detectar y responder complementa —no reemplaza— las contraseñas, las actualizaciones, los controles de acceso y otras medidas de protección.</p>
+
+          <p>El valor de la defensa también está en <strong>reducir las consecuencias</strong>, no solamente en bloquear intentos de intrusión: investigar, contener y recuperar ayuda a limitar la interrupción de los servicios. Para traducirlo a la vida cotidiana, puede pensarse en una escuela que necesita conservar sus registros, un comercio que debe seguir facturando o una oficina pública que debe atender trámites: el objetivo de protección está relacionado con la actividad que esas instituciones permiten realizar.</p>
+
+          <p>Además, la defensa transforma lo aprendido en cambios concretos: una investigación o una prueba puede conducir a mejores reglas de detección, procedimientos más claros y una preparación más adecuada. Así, el Blue Team no solo atiende el problema presente, sino que contribuye a mejorar la capacidad de afrontar los siguientes.</p>
+
+          <h2>Personas, no solo herramientas</h2>
+
+          <p>Un sistema que reúne registros y genera alertas puede apoyar la defensa, pero esas alertas necesitan interpretación, conocimiento del entorno y capacidad de actuar. El NCSC destaca el papel de los analistas y advierte sobre organizaciones que confunden acumular registros o cerrar muchos avisos con detectar eficazmente los ataques.</p>
+
+          <p>Por eso, valorar al Blue Team no debería consistir únicamente en contar cuántas alertas procesa o con qué rapidez las cierra: esas metas pueden incentivar investigaciones superficiales. Resulta más relevante comprobar si reconoce los ataques pertinentes y responde a tiempo, sin descuidar la calidad del análisis ni el desarrollo de las personas que sostienen la operación.</p>
+
+          <h2>Evaluar para mejorar</h2>
+
+          <p>Blue Team y Red Team aportan más valor cuando los ejercicios se convierten en aprendizaje: las evidencias ofensivas permiten identificar oportunidades de detección y cambios necesarios en las defensas. El resultado útil no es declarar un ganador, sino determinar qué controles funcionaron, qué señales se pasaron por alto y qué mejoras deben realizarse.</p>
+
+          <p>Esta colaboración tampoco exige empezar por un ejercicio complejo: el nivel de evaluación debe guardar relación con la madurez y las capacidades disponibles. La importancia del Blue Team está, precisamente, en sostener la capacidad de proteger y responder en la operación cotidiana, y utilizar cada evaluación para fortalecerla.</p>
+        </div>
+
+        <div class="article-nav">
+          <a href="./articulos.html" class="btn btn-primary">
+            <i data-lucide="corner-up-left" width="20" height="20"></i> Volver a Artículos
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" class="footer-icon"></i> & curiosity &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- Script Externo: versión fijada + SRI para evitar ejecución de código alterado (idéntico a index.html) -->
+  <script src="https://unpkg.com/lucide@1.52.0/dist/umd/lucide.min.js" integrity="sha384-SSRIJfpvnhji4rCcULgpNXRJjQ9P/odU9OaWxSumsZiokvJ7zAu4PGQVWyWxTG3u" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Script Propio -->
+  <script src="./index.js" defer></script>
+</body>
+</html>
