@@ -1,0 +1,147 @@
+/* ============================================================
+   articulos.css — Estilos EXCLUSIVOS de la subpágina articulos.html
+   La base del diseño (tema, tipografía, nav, botones, tarjetas)
+   la provee index.css, que se carga primero y no se modifica.
+   ============================================================ */
+
+/* Encabezado de la subpágina: mismo estilo visual que el hero de la
+   portada, pero sin ocupar el 100vh (regla #page-hero en index.css no
+   existe, así que aquí se define el comportamiento de página interior). */
+#page-hero {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 160px 0 60px;
+}
+
+/* Título algo más compacto que el del hero principal */
+#page-hero .hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Secciones de la subpágina: mismo separador que #about / #projects */
+#articulos,
+#proyectos,
+#volver {
+  border-top: 1px solid var(--border);
+}
+
+/* Enlace activo en la navegación de esta página */
+.nav-links a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* ---------- Lista de artículos ---------- */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.article-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.article-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--accent-glow);
+  border-color: var(--accent);
+}
+
+.article-item__date {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.article-item__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-item__desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.article-item__link {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.article-item__link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateX(4px);
+  box-shadow: 0 10px 20px var(--accent-glow);
+}
+
+/* ---------- Estado vacío (estilo terminal) ---------- */
+.empty-state {
+  background: var(--surface-color);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.empty-state__icon {
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.empty-state p {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.empty-state__code {
+  color: var(--accent);
+}
+
+.empty-state__msg {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Ajustes para pantallas angostas ---------- */
+@media (max-width: 960px) {
+  #page-hero {
+    padding-top: 320px;
+  }
+
+  .article-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .article-item__link {
+    width: 48px;
+    height: 48px;
+  }
+}

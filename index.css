@@ -22,6 +22,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Los enlaces de anclaje (#about, #projects...) aterrizan bajo el
+     encabezado fijo; se reserva su alto al desplazarse. */
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -96,7 +99,11 @@ nav {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+/* El punto de corte sube a 960px: con el quinto enlace ("05. Artículos")
+   la fila de navegación ya no cabe en una línea en tablet y quedaba
+   pegada al logo. Se mantiene el mismo comportamiento apilado que en
+   móvil. */
+@media (max-width: 960px) {
   /* Antes los links se ocultaban por completo, dejando el header sin
      navegación en móvil. Ahora pasan a una columna desplazable. */
   nav {
@@ -444,4 +451,20 @@ footer {
   color: var(--text-muted);
   font-size: 0.9rem;
   font-family: var(--font-display);
+}
+/* 6. Compensación del encabezado fijo en pantallas angostas
+   (se declara al final para prevalecer sobre la regla base de #hero).
+   Con los enlaces apilados en columna (hasta 960px), el encabezado fijo
+   mide ~276px: el hero necesita ese espacio superior para que el titular
+   no quede oculto tras el encabezado translúcido. */
+@media (max-width: 960px) {
+  #hero {
+    padding-top: 320px;
+  }
+
+  /* Con el menú apilado el encabezado mide ~276px: los anclajes
+     necesitan más espacio para no quedar tapados. */
+  html {
+    scroll-padding-top: 300px;
+  }
 }

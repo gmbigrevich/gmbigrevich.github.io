@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos & Proyectos | German "parzival" Bigrevich</title>
+  <meta name="description" content="Artículos y proyectos de German Bigrevich: seguridad defensiva, análisis de riesgos, laboratorios prácticos e iniciativas de ciberseguridad.">
+
+  <!-- SECURITY: Content Security Policy (CSP) restrictiva, aplicada por <meta>.
+       Idéntica a la de index.html: default-src 'none', sin 'unsafe-inline',
+       require-trusted-types-for 'script', lucide con versión fijada + SRI. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://unpkg.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; media-src 'none'; require-trusted-types-for 'script';">
+
+  <!-- SECURITY: Referrer Policy (refuerzo; como header HTTP es mas fuerte) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Fuentes (mismas que la página principal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilos: la misma de la portada + estilos exclusivos de esta página -->
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./articulos.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="./index.html" class="logo"><i data-lucide="shield-check" width="24" height="24"></i> Info<span>.</span>Sec</a>
+        <div class="nav-links">
+          <a href="./index.html#about">01. Perfil</a>
+          <a href="./index.html#projects">02. Experiencias & Proyectos</a>
+          <a href="./index.html#certifications">03. Certificaciones</a>
+          <a href="./index.html#contact">04. Contacto</a>
+          <a href="./articulos.html" aria-current="page">05. Artículos</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ENCABEZADO DE LA SUBPÁGINA (mismo estilo que el hero, sin 100vh) -->
+    <section id="page-hero" class="container">
+      <div>
+        <span class="hero-greeting"><i data-lucide="book-open" width="20" height="20"></i> Accediendo a la base de conocimiento...</span>
+        <h1 class="hero-title">Artículos <span>Escritos, guías y proyectos de ciberseguridad.</span></h1>
+        <p class="hero-desc">Recopilación de artículos, análisis y proyectos sobre seguridad defensiva, respuestas a incidentes y las iniciativas en las que participo. Contenido nuevo en construcción.</p>
+      </div>
+    </section>
+
+    <!-- 01. ARTÍCULOS -->
+    <section id="articulos">
+      <div class="container">
+        <h2 class="section-title">01. Artículos</h2>
+        <span class="section-subtitle">Guías, análisis & laboratorios</span>
+
+        <div class="articles-list">
+          <!--
+            PLANTILLA PARA NUEVOS ARTÍCULOS (copiar, completar y quitar el comentario):
+
+            <article class="article-item">
+              <div class="article-item__main">
+                <span class="article-item__date">AAAA-MM-DD</span>
+                <h3 class="article-item__title">Título del artículo</h3>
+                <p class="article-item__desc">Resumen breve del contenido del artículo.</p>
+              </div>
+              <a href="#" class="article-item__link" aria-label="Leer artículo: Título del artículo">
+                <i data-lucide="arrow-right" width="24" height="24"></i>
+              </a>
+            </article>
+          -->
+
+          <!-- Estado vacío: aún no hay artículos publicados -->
+          <div class="empty-state">
+            <i data-lucide="terminal" width="28" height="28" class="empty-state__icon"></i>
+            <p><span class="empty-state__code">$</span> ls ./articulos <span class="empty-state__code">--published</span></p>
+            <p class="empty-state__msg">No hay artículos publicados aún. Próximamente: guías de seguridad defensiva, análisis de laboratorios y apuntes de estudio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. PROYECTOS -->
+    <section id="proyectos">
+      <div class="container">
+        <h2 class="section-title">02. Proyectos</h2>
+        <span class="section-subtitle">Comunidad & Infraestructura</span>
+
+        <div class="projects-grid">
+          <!-- Cybermind -->
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="brain-circuit" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">Cybermind (Co-fundador)</h3>
+            <p class="project-desc">Iniciativa dedicada a la educación y concientización en Ciberseguridad en Argentina. Desarrollamos contenido, recursos y un entorno donde la seguridad de la información se vuelve accesible para todos.</p>
+            <div class="project-links">
+              <a href="https://cybermind-web.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Visitar Portal de Cybermind">
+                <i data-lucide="external-link" width="20" height="20"></i> Visitar Portal
+              </a>
+            </div>
+          </article>
+
+          <!-- Técnico en Soporte de Infraestructura y Redes -->
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="server" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">Técnico en Soporte de Infraestructura y Redes</h3>
+            <p class="project-desc">Actualmente me desempeño como "encargado" del Departamento de Informática y Sistemas de mi organismo provincial donde me encargo de monitorear el sistema UniFi en mesh, de mantenerlo y de aplicar mejoras sustanciales a la conectividad y modernización de los sistemas de infraestructura e informática, así como de atender las cuestiones de soporte técnico de los empleados, armado de computadoras y asesoría.</p>
+          </article>
+
+          <!-- Formación de grupos defensivos -->
+          <article class="project-card">
+            <div class="project-icon">
+              <i data-lucide="shield-alert" width="40" height="40"></i>
+            </div>
+            <h3 class="project-title">Formación de grupos defensivos</h3>
+            <p class="project-desc">Planificación y estrategia de conformación de grupos de seguridad defensiva con planes educativos y proyección laboral.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. VOLVER -->
+    <section id="volver">
+      <div class="container contact-wrapper">
+        <h2 class="section-title">03. Volver</h2>
+        <span class="section-subtitle">Volver a la página principal</span>
+        <a href="./index.html" class="btn btn-primary">
+          <i data-lucide="corner-up-left" width="20" height="20"></i> Volver al Inicio
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Connection encrypted. Built with <i data-lucide="coffee" width="14" height="14" class="footer-icon"></i> & curiosity &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- Script Externo: versión fijada + SRI para evitar ejecución de código alterado (idéntico a index.html) -->
+  <script src="https://unpkg.com/lucide@1.52.0/dist/umd/lucide.min.js" integrity="sha384-SSRIJfpvnhji4rCcULgpNXRJjQ9P/odU9OaWxSumsZiokvJ7zAu4PGQVWyWxTG3u" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Script Propio -->
+  <script src="./index.js" defer></script>
+</body>
+</html>
